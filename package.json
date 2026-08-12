@@ -1,0 +1,31 @@
+{
+  "name": "pi-proofline",
+  "version": "0.1.0",
+  "description": "Pi extension that records every agent run as a verifiable proofline bundle: tamper-evident, secret-redacted, replayable evidence of what your coding agent actually did.",
+  "keywords": [
+    "pi-package",
+    "proofline",
+    "provenance",
+    "verifiable",
+    "agent"
+  ],
+  "license": "MIT",
+  "author": "Powfu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Powfu-zwx/pi-proofline"
+  },
+  "type": "module",
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/canonical.test.ts tests/redact.test.ts tests/recorder.test.ts",
+    "emit-vectors": "node tests/emit-vectors.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}
