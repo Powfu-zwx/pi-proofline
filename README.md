@@ -73,6 +73,20 @@ npm run emit-vectors    # write cross-language fixtures to out/
 python tests/cross_verify.py   # requires: pip install proofline
 ```
 
+End-to-end against a real pi install, no API key needed — run the mock provider, then point an isolated pi at it:
+
+```bash
+node tests/e2e/mock-provider.mjs &
+export PI_CODING_AGENT_DIR=$(mktemp -d) PI_OFFLINE=1
+cat > "$PI_CODING_AGENT_DIR/models.json" <<'EOF'
+{ "providers": { "mock": { "baseUrl": "http://127.0.0.1:8377/v1", "api": "openai-completions",
+  "apiKey": "dummy", "compat": { "supportsDeveloperRole": false, "supportsReasoningEffort": false },
+  "models": [ { "id": "gpt-mock" } ] } } }
+EOF
+pi -p --no-session --provider mock --model gpt-mock -e ./extensions/proofline.ts "Say hello"
+uvx proofline verify .proofline/pi-run-*.json
+```
+
 ## License
 
 MIT
