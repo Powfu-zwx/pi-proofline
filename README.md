@@ -4,6 +4,7 @@
 
 **Verifiable evidence for every [pi](https://pi.dev) agent run.**
 
+[![npm](https://img.shields.io/npm/v/pi-proofline.svg)](https://www.npmjs.com/package/pi-proofline)
 [![CI](https://github.com/Powfu-zwx/pi-proofline/actions/workflows/ci.yml/badge.svg)](https://github.com/Powfu-zwx/pi-proofline/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Runtime dependencies](https://img.shields.io/badge/runtime_deps-0-success.svg)](package.json)
@@ -47,6 +48,12 @@ One run (prompt → agent settled) produces one bundle. The digest covers the ev
 **Audit what the agent did.** The bundle records what went over the wire, captured at the provider boundary — not a reconstruction from session state.
 
 ## Install
+
+```bash
+pi install npm:pi-proofline
+```
+
+Or straight from source:
 
 ```bash
 pi install git:github.com/Powfu-zwx/pi-proofline

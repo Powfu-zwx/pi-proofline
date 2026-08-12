@@ -13,11 +13,17 @@
   "author": "Powfu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Powfu-zwx/pi-proofline"
+    "url": "git+https://github.com/Powfu-zwx/pi-proofline.git"
   },
+  "homepage": "https://github.com/Powfu-zwx/pi-proofline#readme",
+  "files": [
+    "extensions"
+  ],
   "type": "module",
   "pi": {
-    "extensions": ["./extensions"]
+    "extensions": [
+      "./extensions"
+    ]
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
