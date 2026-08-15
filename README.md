@@ -80,6 +80,8 @@ uvx proofline diff baseline.json current.json
 uvx proofline keygen --out signing.key && uvx proofline sign bundle.json --key signing.key
 ```
 
+`examples/semantic-diff-demo.ts` walks the same `diff` on canned pi events: identical reruns, a prompt change, and an inserted tool call.
+
 ## Inside a bundle
 
 Abridged from a real run ([spec](https://github.com/Powfu-zwx/proofline/blob/master/spec/run-bundle-v0.1.md)):

@@ -28,3 +28,4 @@ jobs:
       # extension must verify under the released Python reference.
       - run: pip install proofline
       - run: python tests/cross_verify.py
+      - run: node examples/semantic-diff-demo.ts

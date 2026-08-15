@@ -28,7 +28,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/canonical.test.ts tests/redact.test.ts tests/recorder.test.ts",
-    "emit-vectors": "node tests/emit-vectors.ts"
+    "emit-vectors": "node tests/emit-vectors.ts",
+    "demo:diff": "node examples/semantic-diff-demo.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
